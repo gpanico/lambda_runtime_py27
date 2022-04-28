@@ -1,0 +1,4 @@
+FROM public.ecr.aws/lambda/python:2.7
+ADD bootstrap /var/runtime/bootstrap
+RUN chmod 755 /var/runtime/bootstrap
+ADD function.py /var/task/function.py
